@@ -1,0 +1,8 @@
+name: Orchard
+main: io.rampant.bukkit.orchard
+version: 0.1
+commands:
+  orchard:
+    description: Manage the orchard.
+    usage: |
+           /<command> reload - Reload Orchard configuration.
