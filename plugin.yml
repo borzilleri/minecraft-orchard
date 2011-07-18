@@ -1,5 +1,5 @@
 name: Orchard
-main: io.rampant.bukkit.orchard
+main: io.rampant.bukkit.orchard.Orchard
 version: 0.1
 commands:
   orchard:

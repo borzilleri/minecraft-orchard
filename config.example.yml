@@ -1,0 +1,16 @@
+normal:
+  decay:
+    APPLE:
+      chance: 5.0
+      amount: 2
+    GOLDEN_APPLE:
+      chance: 1.0
+  break:
+    APPLE:
+      chance: 20.0
+      shears: true
+birch:
+  decay:
+    INK_SACK:
+      chance: 15.0
+      data: 3
