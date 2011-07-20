@@ -39,7 +39,7 @@ public class Tree {
 				continue;
 			}
 
-			if( decay || node.getBoolean("shears", false) || wieldingShears ) {
+			if( decay || !node.getBoolean("shears", false) || wieldingShears ) {
 				Material itemType;
 				try {
 					itemType = Material.valueOf(block.getKey());
