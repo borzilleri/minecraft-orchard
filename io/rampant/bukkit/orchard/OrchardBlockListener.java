@@ -19,14 +19,14 @@ public class OrchardBlockListener extends BlockListener {
 	@Override
 	public void onBlockBreak(BlockBreakEvent event) {
 		if( event.getBlock().getType() == Material.LEAVES ) {
-			Tree.pruneLeaf(event.getBlock(), false);
+			Tree.pruneLeaf(event.getBlock(), false, event.getPlayer());
 		}
 	}
 
 	@Override
 	public void onLeavesDecay(LeavesDecayEvent event) {
 		if( event.getBlock().getType() == Material.LEAVES ) {
-			Tree.pruneLeaf(event.getBlock(), true);
+			Tree.pruneLeaf(event.getBlock(), true, null);
 		}
 	}
 
