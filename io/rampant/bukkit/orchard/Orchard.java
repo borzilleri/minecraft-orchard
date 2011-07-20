@@ -36,6 +36,8 @@ public class Orchard extends JavaPlugin {
 
 	public void loadDefaults() {
 		config = getConfiguration();
+		config.load();
+		
 		Map<String, ConfigurationNode> nodes = config.getNodes("");
 		if( (null != nodes) && !nodes.isEmpty() ) {
 			return;
