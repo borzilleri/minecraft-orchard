@@ -43,17 +43,16 @@ public class Tree {
 				Material itemType;
 				try {
 					itemType = Material.valueOf(block.getKey());
-					dropItemFromLeaf(leafBlock, itemType, node.getInt("data", -1), node.getInt("amount", 1));
+					leafBlock.getWorld().dropItemNaturally(leafBlock.getLocation(),
+																								 new ItemStack(Material.valueOf(block.getKey()),
+																															 node.getInt("amount", 1),
+																															 (short) 0,
+																															 (byte) node.getInt("data", 0)));
 				}
 				catch( IllegalArgumentException e ) {
 				}
 			}
 			return;
 		}
-	}
-
-	protected static void dropItemFromLeaf(Block block, Material itemType, int metaData, int amount) {
-		block.getWorld().dropItemNaturally(block.getLocation(),
-																			 new ItemStack(itemType, amount, (short) 0, (byte) metaData));
 	}
 }
